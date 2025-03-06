@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "work",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "filters": {
+      "displayName": "Filters",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.filters"
+    },
+    "works": {
+      "displayName": "Works",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.works"
+    }
+  }
+}

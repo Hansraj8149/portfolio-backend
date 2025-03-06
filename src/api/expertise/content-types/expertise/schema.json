@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expertises",
+  "info": {
+    "singularName": "expertise",
+    "pluralName": "expertises",
+    "displayName": "Expertise"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "expertises": {
+      "displayName": "Expertise",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.expertise"
+    },
+    "subheading": {
+      "type": "text"
+    }
+  }
+}

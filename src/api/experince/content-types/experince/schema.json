@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experinces",
+  "info": {
+    "singularName": "experince",
+    "pluralName": "experinces",
+    "displayName": "Experince"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "rol": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "fromtTme": {
+      "type": "date"
+    },
+    "toTime": {
+      "type": "date"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

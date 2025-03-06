@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_filters",
+  "info": {
+    "displayName": "Filters",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_skills",
+  "info": {
+    "displayName": "Skills",
+    "icon": "write"
+  },
+  "options": {},
+  "attributes": {
+    "skill": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
