@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills",
+  "info": {
+    "singularName": "skill",
+    "pluralName": "skills",
+    "displayName": "Skills&Experince",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "skills": {
+      "displayName": "Skills",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.skills"
+    },
+    "experiences": {
+      "displayName": "Experince",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.experince"
+    }
+  }
+}

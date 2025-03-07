@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_skill_tags",
+  "info": {
+    "displayName": "SkillTags"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

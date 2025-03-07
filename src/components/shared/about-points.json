@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_about_points",
+  "info": {
+    "displayName": "AboutPoints",
+    "icon": "heart",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

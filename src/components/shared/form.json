@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_forms",
+  "info": {
+    "displayName": "Form"
+  },
+  "options": {},
+  "attributes": {
+    "input": {
+      "displayName": "Input",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.input"
+    },
+    "title": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_photo_cards",
+  "info": {
+    "displayName": "PhotoCard",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "skillTags": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.filters"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

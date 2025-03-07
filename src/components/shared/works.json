@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_works",
+  "info": {
+    "displayName": "Works",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "workTags": {
+      "displayName": "workTags",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.work-tags"
+    }
+  }
+}

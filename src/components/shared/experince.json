@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_experinces",
+  "info": {
+    "displayName": "Experince",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "role": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "fromDate": {
+      "type": "date"
+    },
+    "toDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

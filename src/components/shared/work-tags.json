@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_work_tags",
+  "info": {
+    "displayName": "workTags",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "tag": {
+      "type": "string"
+    }
+  }
+}

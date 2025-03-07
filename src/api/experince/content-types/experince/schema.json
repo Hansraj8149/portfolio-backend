@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experinces",
+  "info": {
+    "singularName": "experince",
+    "pluralName": "experinces",
+    "displayName": "Experience",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "experiences": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.experince"
+    }
+  }
+}
