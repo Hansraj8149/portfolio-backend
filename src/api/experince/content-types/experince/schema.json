@@ -4,29 +4,17 @@
   "info": {
     "singularName": "experince",
     "pluralName": "experinces",
-    "displayName": "Experince"
+    "displayName": "Experience",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "rol": {
-      "type": "string"
-    },
-    "company": {
-      "type": "string"
-    },
-    "fromtTme": {
-      "type": "date"
-    },
-    "toTime": {
-      "type": "date"
-    },
-    "description": {
-      "type": "blocks"
-    },
-    "location": {
-      "type": "string"
+    "experiences": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.experince"
     }
   }
 }

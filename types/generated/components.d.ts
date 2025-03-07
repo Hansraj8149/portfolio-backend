@@ -8,10 +8,7 @@ export interface SharedAboutPoints extends Struct.ComponentSchema {
     icon: 'heart';
   };
   attributes: {
-    buttonLink: Schema.Attribute.String;
-    buttonTexk: Schema.Attribute.String;
     description: Schema.Attribute.Blocks;
-    photoCard: Schema.Attribute.Component<'shared.photo-card', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -19,10 +16,12 @@ export interface SharedAboutPoints extends Struct.ComponentSchema {
 export interface SharedContactDetail extends Struct.ComponentSchema {
   collectionName: 'components_shared_contact_details';
   info: {
+    description: '';
     displayName: 'ContactDetail';
   };
   attributes: {
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    link: Schema.Attribute.String;
     name: Schema.Attribute.String;
     value: Schema.Attribute.String;
   };
@@ -65,11 +64,12 @@ export interface SharedExpertise extends Struct.ComponentSchema {
 export interface SharedFilters extends Struct.ComponentSchema {
   collectionName: 'components_shared_filters';
   info: {
+    description: '';
     displayName: 'Filters';
     icon: 'eye';
   };
   attributes: {
-    tag: Schema.Attribute.String;
+    skillTags: Schema.Attribute.Component<'shared.skill-tags', true>;
   };
 }
 
@@ -97,6 +97,17 @@ export interface SharedInput extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedNavbarLinks extends Struct.ComponentSchema {
+  collectionName: 'components_shared_navbar_links';
+  info: {
+    displayName: 'NavbarLinks';
+  };
+  attributes: {
+    link: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedPhotoCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_photo_cards';
   info: {
@@ -108,6 +119,16 @@ export interface SharedPhotoCard extends Struct.ComponentSchema {
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     skillTags: Schema.Attribute.Component<'shared.filters', false>;
     subheading: Schema.Attribute.String;
+  };
+}
+
+export interface SharedSkillTags extends Struct.ComponentSchema {
+  collectionName: 'components_shared_skill_tags';
+  info: {
+    displayName: 'SkillTags';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
   };
 }
 
@@ -163,7 +184,9 @@ declare module '@strapi/strapi' {
       'shared.filters': SharedFilters;
       'shared.form': SharedForm;
       'shared.input': SharedInput;
+      'shared.navbar-links': SharedNavbarLinks;
       'shared.photo-card': SharedPhotoCard;
+      'shared.skill-tags': SharedSkillTags;
       'shared.skills': SharedSkills;
       'shared.work-tags': SharedWorkTags;
       'shared.works': SharedWorks;

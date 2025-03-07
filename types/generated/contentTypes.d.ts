@@ -382,6 +382,8 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
   };
   attributes: {
     aboutPoints: Schema.Attribute.Component<'shared.about-points', true>;
+    buttonLink: Schema.Attribute.String;
+    buttonText: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -390,6 +392,7 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
+    photoCard: Schema.Attribute.Component<'shared.photo-card', false>;
     publishedAt: Schema.Attribute.DateTime;
     subheading: Schema.Attribute.Text;
     title: Schema.Attribute.String;
@@ -402,6 +405,7 @@ export interface ApiAboutAbout extends Struct.CollectionTypeSchema {
 export interface ApiContactContact extends Struct.CollectionTypeSchema {
   collectionName: 'contacts';
   info: {
+    description: '';
     displayName: 'Contact';
     pluralName: 'contacts';
     singularName: 'contact';
@@ -434,7 +438,8 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
 export interface ApiExperinceExperince extends Struct.CollectionTypeSchema {
   collectionName: 'experinces';
   info: {
-    displayName: 'Experince';
+    description: '';
+    displayName: 'Experience';
     pluralName: 'experinces';
     singularName: 'experince';
   };
@@ -442,22 +447,17 @@ export interface ApiExperinceExperince extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    company: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Blocks;
-    fromtTme: Schema.Attribute.Date;
+    experiences: Schema.Attribute.Component<'shared.experince', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::experince.experince'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    rol: Schema.Attribute.String;
-    toTime: Schema.Attribute.Date;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -498,6 +498,7 @@ export interface ApiExpertiseExpertise extends Struct.CollectionTypeSchema {
 export interface ApiHeroHero extends Struct.CollectionTypeSchema {
   collectionName: 'heroes';
   info: {
+    description: '';
     displayName: 'Hero';
     pluralName: 'heroes';
     singularName: 'hero';
@@ -522,6 +523,37 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
     subheading: Schema.Attribute.String;
     title: Schema.Attribute.String;
     twitterLink: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNavbarNavbar extends Struct.CollectionTypeSchema {
+  collectionName: 'navbars';
+  info: {
+    displayName: 'Navbar';
+    pluralName: 'navbars';
+    singularName: 'navbar';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::navbar.navbar'
+    > &
+      Schema.Attribute.Private;
+    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    navbarLinks: Schema.Attribute.Component<'shared.navbar-links', true>;
+    primaryButtonLink: Schema.Attribute.Text;
+    primaryButtonText: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1102,6 +1134,7 @@ declare module '@strapi/strapi' {
       'api::experince.experince': ApiExperinceExperince;
       'api::expertise.expertise': ApiExpertiseExpertise;
       'api::hero.hero': ApiHeroHero;
+      'api::navbar.navbar': ApiNavbarNavbar;
       'api::skill.skill': ApiSkillSkill;
       'api::work.work': ApiWorkWork;
       'plugin::content-releases.release': PluginContentReleasesRelease;

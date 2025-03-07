@@ -12,18 +12,6 @@
     },
     "description": {
       "type": "blocks"
-    },
-    "photoCard": {
-      "displayName": "PhotoCard",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.photo-card"
-    },
-    "buttonTexk": {
-      "type": "string"
-    },
-    "buttonLink": {
-      "type": "string"
     }
   }
 }

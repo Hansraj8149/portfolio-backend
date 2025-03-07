@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_navbar_links",
+  "info": {
+    "displayName": "NavbarLinks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

@@ -2,12 +2,16 @@
   "collectionName": "components_shared_filters",
   "info": {
     "displayName": "Filters",
-    "icon": "eye"
+    "icon": "eye",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "tag": {
-      "type": "string"
+    "skillTags": {
+      "displayName": "SkillTags",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.skill-tags"
     }
   }
 }
