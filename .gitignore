@@ -81,6 +81,7 @@ ssl
 .idea
 nbproject
 .env.development.local
+.env.production.local
 public/uploads/*
 !public/uploads/.gitkeep
 .tsbuildinfo

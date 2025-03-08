@@ -6,16 +6,14 @@
   "scripts": {
     "build": "strapi build",
     "deploy": "strapi deploy",
-    "dev": "strapi develop",
-    "start": "strapi start",
+    "dev": "dotenvx run -f .env.development.local -f .env.development -- strapi develop",
+    "start": "dotenvx run -f .env.production.local -f .env.production -- strapi start",
     "strapi": "strapi"
   },
   "dependencies": {
-    "@dotenvx/dotenvx": "^1.38.4",
     "@strapi/plugin-cloud": "5.10.4",
     "@strapi/plugin-users-permissions": "5.10.4",
     "@strapi/strapi": "5.10.4",
-    "cross-env": "^7.0.3",
     "pg": "8.8.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -24,6 +22,7 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
