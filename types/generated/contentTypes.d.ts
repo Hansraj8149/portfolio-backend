@@ -519,6 +519,7 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
     heading: Schema.Attribute.String;
     leetcodeLink: Schema.Attribute.String;
     linkedinLink: Schema.Attribute.String;
+    links: Schema.Attribute.Component<'shared.links', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
       Schema.Attribute.Private;

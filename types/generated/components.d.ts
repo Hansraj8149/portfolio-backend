@@ -97,6 +97,17 @@ export interface SharedInput extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLinks extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
+  info: {
+    displayName: 'Links';
+  };
+  attributes: {
+    link: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+  };
+}
+
 export interface SharedNavbarLinks extends Struct.ComponentSchema {
   collectionName: 'components_shared_navbar_links';
   info: {
@@ -186,6 +197,7 @@ declare module '@strapi/strapi' {
       'shared.filters': SharedFilters;
       'shared.form': SharedForm;
       'shared.input': SharedInput;
+      'shared.links': SharedLinks;
       'shared.navbar-links': SharedNavbarLinks;
       'shared.photo-card': SharedPhotoCard;
       'shared.skill-tags': SharedSkillTags;
