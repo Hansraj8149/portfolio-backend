@@ -23,7 +23,7 @@
     "filters": {
       "displayName": "Filters",
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.filters"
     },
     "works": {
