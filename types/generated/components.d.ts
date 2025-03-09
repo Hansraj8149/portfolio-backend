@@ -165,10 +165,12 @@ export interface SharedWorks extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Blocks;
+    githubLink: Schema.Attribute.String;
     image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    liveLink: Schema.Attribute.String;
     title: Schema.Attribute.String;
     workTags: Schema.Attribute.Component<'shared.work-tags', true>;
   };

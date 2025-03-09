@@ -14,20 +14,27 @@
       "type": "blocks"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "workTags": {
       "displayName": "workTags",
       "type": "component",
       "repeatable": true,
       "component": "shared.work-tags"
+    },
+    "liveLink": {
+      "type": "string"
+    },
+    "githubLink": {
+      "type": "string"
     }
   }
 }

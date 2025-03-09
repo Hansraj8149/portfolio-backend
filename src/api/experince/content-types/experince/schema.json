@@ -15,6 +15,15 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.experince"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "subheading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }
