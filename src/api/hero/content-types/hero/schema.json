@@ -37,6 +37,12 @@
     },
     "leetcodeLink": {
       "type": "string"
+    },
+    "links": {
+      "displayName": "Links",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.links"
     }
   }
 }
