@@ -122,13 +122,14 @@ export interface SharedNavbarLinks extends Struct.ComponentSchema {
 export interface SharedPhotoCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_photo_cards';
   info: {
+    description: '';
     displayName: 'PhotoCard';
     icon: 'landscape';
   };
   attributes: {
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    skillTags: Schema.Attribute.Component<'shared.filters', false>;
+    skillTags: Schema.Attribute.Component<'shared.skill-tags', true>;
     subheading: Schema.Attribute.String;
   };
 }

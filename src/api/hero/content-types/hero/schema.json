@@ -23,21 +23,6 @@
     "description": {
       "type": "string"
     },
-    "linkedinLink": {
-      "type": "string"
-    },
-    "githubLink": {
-      "type": "string"
-    },
-    "emailLink": {
-      "type": "string"
-    },
-    "twitterLink": {
-      "type": "string"
-    },
-    "leetcodeLink": {
-      "type": "string"
-    },
     "links": {
       "displayName": "Links",
       "type": "component",

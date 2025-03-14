@@ -2,6 +2,15 @@
  * work router
  */
 
-import { factories } from '@strapi/strapi';
+import { factories } from "@strapi/strapi";
 
-export default factories.createCoreRouter('api::work.work');
+export default factories.createCoreRouter("api::work.work", {
+  config: {
+    find: {
+      middlewares: ["api::work.populate-works"],
+    },
+    findOne: {
+      middlewares: ["api::work.populate-works"],
+    },
+  },
+});
