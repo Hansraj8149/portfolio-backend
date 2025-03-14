@@ -435,13 +435,13 @@ export interface ApiContactContact extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiExperinceExperince extends Struct.CollectionTypeSchema {
-  collectionName: 'experinces';
+export interface ApiExperienceExperience extends Struct.CollectionTypeSchema {
+  collectionName: 'experiences';
   info: {
     description: '';
     displayName: 'Experience';
-    pluralName: 'experinces';
-    singularName: 'experince';
+    pluralName: 'experiences';
+    singularName: 'experience';
   };
   options: {
     draftAndPublish: true;
@@ -451,12 +451,12 @@ export interface ApiExperinceExperince extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Blocks;
-    experiences: Schema.Attribute.Component<'shared.experince', true>;
+    experiences: Schema.Attribute.Component<'shared.experience', true>;
     heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::experince.experince'
+      'api::experience.experience'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -514,11 +514,7 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.String;
-    emailLink: Schema.Attribute.String;
-    githubLink: Schema.Attribute.String;
     heading: Schema.Attribute.String;
-    leetcodeLink: Schema.Attribute.String;
-    linkedinLink: Schema.Attribute.String;
     links: Schema.Attribute.Component<'shared.links', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
@@ -526,7 +522,6 @@ export interface ApiHeroHero extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     subheading: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    twitterLink: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -580,7 +575,6 @@ export interface ApiSkillSkill extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
-    experiences: Schema.Attribute.Component<'shared.experince', true>;
     heading: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::skill.skill'> &
@@ -1135,7 +1129,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::contact.contact': ApiContactContact;
-      'api::experince.experince': ApiExperinceExperince;
+      'api::experience.experience': ApiExperienceExperience;
       'api::expertise.expertise': ApiExpertiseExpertise;
       'api::hero.hero': ApiHeroHero;
       'api::navbar.navbar': ApiNavbarNavbar;

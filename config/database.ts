@@ -1,12 +1,12 @@
 export default ({ env }) => {
   const client = env("DATABASE_CLIENT", "sqlite");
-  console.log(
-    env("DATABASE_HOST"),
-    env("DATABASE_PORT"),
-    env("DATABASE_NAME"),
-    env("DATABASE_USERNAME"),
-    env("DATABASE_PASSWORD")
-  );
+  // console.log(
+  //   env("DATABASE_HOST"),
+  //   env("DATABASE_PORT"),
+  //   env("DATABASE_NAME"),
+  //   env("DATABASE_USERNAME"),
+  //   env("DATABASE_PASSWORD")
+  // );
   const connections = {
     postgres: {
       connection: {

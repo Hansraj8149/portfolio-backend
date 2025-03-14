@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "experinces",
+  "collectionName": "experiences",
   "info": {
-    "singularName": "experince",
-    "pluralName": "experinces",
+    "singularName": "experience",
+    "pluralName": "experiences",
     "displayName": "Experience",
     "description": ""
   },
@@ -14,7 +14,7 @@
     "experiences": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.experince"
+      "component": "shared.experience"
     },
     "heading": {
       "type": "string"

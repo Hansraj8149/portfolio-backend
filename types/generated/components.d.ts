@@ -27,11 +27,11 @@ export interface SharedContactDetail extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedExperince extends Struct.ComponentSchema {
-  collectionName: 'components_shared_experinces';
+export interface SharedExperience extends Struct.ComponentSchema {
+  collectionName: 'components_shared_experiences';
   info: {
     description: '';
-    displayName: 'Experince';
+    displayName: 'Experience';
   };
   attributes: {
     company: Schema.Attribute.String;
@@ -122,13 +122,14 @@ export interface SharedNavbarLinks extends Struct.ComponentSchema {
 export interface SharedPhotoCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_photo_cards';
   info: {
+    description: '';
     displayName: 'PhotoCard';
     icon: 'landscape';
   };
   attributes: {
     heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    skillTags: Schema.Attribute.Component<'shared.filters', false>;
+    skillTags: Schema.Attribute.Component<'shared.skill-tags', true>;
     subheading: Schema.Attribute.String;
   };
 }
@@ -192,7 +193,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.about-points': SharedAboutPoints;
       'shared.contact-detail': SharedContactDetail;
-      'shared.experince': SharedExperince;
+      'shared.experience': SharedExperience;
       'shared.expertise': SharedExpertise;
       'shared.filters': SharedFilters;
       'shared.form': SharedForm;
