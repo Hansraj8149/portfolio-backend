@@ -37,6 +37,10 @@ export interface SharedExperience extends Struct.ComponentSchema {
     company: Schema.Attribute.String;
     description: Schema.Attribute.Blocks;
     fromDate: Schema.Attribute.Date;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     location: Schema.Attribute.String;
     role: Schema.Attribute.String;
     toDate: Schema.Attribute.Date;
