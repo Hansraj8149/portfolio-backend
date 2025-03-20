@@ -3,6 +3,7 @@
  */
 
 import type { Core } from "@strapi/strapi";
+import skill from "../../skill/controllers/skill";
 
 const populate = {
   populate: {
@@ -16,6 +17,11 @@ const populate = {
     works: {
       populate: {
         workTags: {
+          populate: {
+            fields: ["tag"],
+          },
+        },
+        skillTags: {
           populate: {
             fields: ["tag"],
           },
