@@ -187,6 +187,7 @@ export interface SharedWorks extends Struct.ComponentSchema {
       true
     >;
     liveLink: Schema.Attribute.String;
+    skillTags: Schema.Attribute.Component<'shared.skill-tags', true>;
     title: Schema.Attribute.String;
     workTags: Schema.Attribute.Component<'shared.work-tags', true>;
   };
