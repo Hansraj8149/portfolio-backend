@@ -35,6 +35,11 @@
     },
     "githubLink": {
       "type": "string"
+    },
+    "skillTags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.skill-tags"
     }
   }
 }
