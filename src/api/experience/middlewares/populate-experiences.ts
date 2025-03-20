@@ -14,6 +14,13 @@ const populate = {
         "toDate",
         "location",
       ],
+      populate: {
+        images: {
+          populate: {
+            fields: ["url", "name", "alternativeText"],
+          },
+        },
+      },
     },
   },
 };
